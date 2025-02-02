@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:swigato/core/common/widgets/widget_fuction_combine.dart';
-import 'package:swigato/core/theme/app_pallete.dart';
 
 class CustomAppbar extends StatelessWidget {
   final WidgetFuctionCombine? firstWidget;

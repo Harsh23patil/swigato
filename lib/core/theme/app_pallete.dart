@@ -11,4 +11,5 @@ class AppPallete {
   static const Color authFielBackgroundColor = Color.fromARGB(255, 240, 245, 250);
   static const Color secondaryLightTextColor = Color.fromARGB(255, 248, 247, 255);
   static const Color transparentColor = Color.fromARGB(0, 0, 0, 0);
+  static const Color authHintTextColor = Color.fromARGB(255, 160, 165, 186);
 }

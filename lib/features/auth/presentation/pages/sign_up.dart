@@ -5,7 +5,6 @@ import 'package:swigato/core/common/widgets/custom_appbar.dart';
 import 'package:swigato/core/common/widgets/widget_fuction_combine.dart';
 import 'package:swigato/core/constants/texts.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
-import 'package:swigato/core/theme/textstyle.dart';
 import 'package:swigato/features/auth/presentation/widgets/auth_field.dart';
 
 class SignUp extends StatefulWidget {
@@ -30,7 +29,7 @@ class _SignUpState extends State<SignUp> {
           ),
 
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 24),
             child: const Text(
               AppText.SIGNUP,
               style: TextStyle(

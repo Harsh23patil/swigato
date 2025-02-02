@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swigato/core/theme/app_pallete.dart';
 
 class AuthField extends StatelessWidget {
   final String hintText;
@@ -23,6 +24,9 @@ class AuthField extends StatelessWidget {
         TextFormField(
           decoration: InputDecoration(
             hintText: hintText,
+            hintStyle: const TextStyle(
+              color: AppPallete.authHintTextColor,
+            ),
             floatingLabelBehavior: FloatingLabelBehavior.always,
           ),
           obscureText: obscureText,

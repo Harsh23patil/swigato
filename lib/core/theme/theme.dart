@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
-import 'package:swigato/core/theme/textstyle.dart';
 
 class AppTheme {
   static final _border = OutlineInputBorder(
@@ -18,7 +17,7 @@ class AppTheme {
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: AppPallete.authFielBackgroundColor,
-      contentPadding: EdgeInsets.all(22),
+      contentPadding: const EdgeInsets.all(22),
       labelStyle: const TextStyle(
         // fontFamily: FontFamily.sen,
         fontSize: 18,
