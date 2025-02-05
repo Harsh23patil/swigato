@@ -127,3 +127,70 @@ This app will be developed using Flutter for the front end and Supabase for back
 ## UI/UX ➖
 
 All the UI will be followed by using the following figma design. UI url - https://www.figma.com/design/3J1we1wjnPWmhrmiT7uz46/Food-Delivery-App-(Community)?node-id=0-1&p=f&t=oWElPOjb5XJZE95V-0
+
+
+
+lib/
+│── core/
+│   ├── theme/            # Theme-related files (colors, typography, dark mode, etc.)
+│   │   ├── theme.dart
+│   │   ├── light_theme.dart
+│   │   ├── dark_theme.dart
+│   │   ├── app_colors.dart
+│   │   ├── app_fonts.dart
+│   │   ├── app_text_styles.dart
+│   │
+│   ├── constants/        # Application-wide constants (strings, APIs, assets)
+│   │   ├── app_constants.dart
+│   │   ├── app_strings.dart
+│   │   ├── api_endpoints.dart
+│   │   ├── asset_paths.dart
+│   │
+│   ├── utils/            # Helper functions (date, validation, formatting, etc.)
+│   │   ├── date_utils.dart
+│   │   ├── validators.dart
+│   │   ├── formatter.dart
+│   │
+│   ├── network/          # Networking (Dio/HTTP client, API services, error handling)
+│   │   ├── api_client.dart
+│   │   ├── api_service.dart
+│   │   ├── network_exceptions.dart
+│   │
+│   ├── widgets/          # Common reusable UI components
+│   │   ├── custom_button.dart
+│   │   ├── custom_textfield.dart
+│   │   ├── loading_indicator.dart
+│   │
+│   ├── services/         # Services for Firebase, notifications, local storage, etc.
+│   │   ├── local_storage_service.dart
+│   │   ├── notification_service.dart
+│   │   ├── firebase_service.dart
+│   │
+│   ├── config/           # Environment & app-level configurations
+│   │   ├── environment.dart
+│   │   ├── app_config.dart
+│   │
+│   ├── enums/            # App-wide enums
+│   │   ├── user_role.dart
+│   │   ├── order_status.dart
+│   │
+│   ├── extensions/       # Useful Dart/Flutter extensions
+│   │   ├── context_extensions.dart
+│   │   ├── string_extensions.dart
+│   │
+│   ├── di/               # Dependency injection (GetIt, Provider, Riverpod)
+│   │   ├── dependency_injection.dart
+
+
+
+Folder	                                Purpose
+theme/	        Stores global theme settings, colors, typography, and dark/light themes.
+constants/	    Contains static values like API endpoints, asset paths, and app-wide constants.
+utils/	        Houses reusable utility functions (date formatting, validation, etc.).
+network/	    Manages API calls, error handling, and network requests.
+widgets/	    Stores reusable UI components (custom buttons, text fields, etc.).
+services/	    Contains app services like Firebase, local storage, notifications, etc.
+config/	        Manages environment-based configurations and app settings.
+enums/  	    Holds app-wide enumerations (e.g., user roles, order statuses).
+extensions/	    Stores Dart extensions for adding extra functionality to existing classes.
+di/	Manages     dependency injection using GetIt, Provider, or Riverpod.

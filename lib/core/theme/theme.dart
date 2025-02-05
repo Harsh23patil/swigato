@@ -14,6 +14,10 @@ class AppTheme {
   static final lightThemeMode = ThemeData.light().copyWith(
     scaffoldBackgroundColor: AppPallete.lightBackgroundColor,
     textTheme: GoogleFonts.senTextTheme(),
+    textSelectionTheme:const TextSelectionThemeData(
+      cursorColor: AppPallete.cursorColor,
+      selectionHandleColor: AppPallete.cursorColor
+    ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: AppPallete.authFielBackgroundColor,

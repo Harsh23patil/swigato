@@ -23,7 +23,7 @@ class CustomAppbar extends StatelessWidget {
         children: [
           Row(
             children: [
-              if (firstWidget != null) firstWidget!.widget,
+              if (firstWidget != null) GestureDetector(onTap: firstWidget!.functionality ,child: firstWidget!.widget),
               if (secWidget != null) secWidget!.widget,
             ],
           ),

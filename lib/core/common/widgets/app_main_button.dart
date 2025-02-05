@@ -27,8 +27,7 @@ class AppButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12), // Set your desired radius
           ),
         ),
-        onPressed: () {
-        },
+        onPressed: () {},
         child: Text(
           buttonText,
           style: const TextStyle(

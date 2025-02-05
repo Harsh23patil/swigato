@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swigato/core/theme/theme.dart';
+import 'package:swigato/features/auth/presentation/pages/login.dart';
 import 'package:swigato/features/auth/presentation/pages/sign_up.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner:false,
       title: 'Blog App',
       theme: AppTheme.lightThemeMode,
-      home: SignUp(),
+      home: const LoginPage(),
     );
   }
 }

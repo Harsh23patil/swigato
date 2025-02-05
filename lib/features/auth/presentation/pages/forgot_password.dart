@@ -7,28 +7,23 @@ import 'package:swigato/core/constants/texts.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
 import 'package:swigato/features/auth/presentation/widgets/auth_field.dart';
 
-class SignUp extends StatefulWidget {
-  static route() => MaterialPageRoute(builder: (context) => const SignUp());
-  const SignUp({super.key});
+class ForgotPassword extends StatefulWidget {
+  static route() => MaterialPageRoute(builder: (context) => const ForgotPassword());
+  const ForgotPassword({super.key});
 
   @override
-  State<SignUp> createState() => _SignUpState();
+  State<ForgotPassword> createState() => _ForgotPasswordState();
 }
 
-class _SignUpState extends State<SignUp> {
-  TextEditingController nameController = TextEditingController();
+class _ForgotPasswordState extends State<ForgotPassword> {
   TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController reTypePasswordController = TextEditingController();
 
   @override
   void dispose() {
-    nameController.dispose();
     emailController.dispose();
-    passwordController.dispose();
-    reTypePasswordController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     final formKey = GlobalKey();
@@ -50,7 +45,7 @@ class _SignUpState extends State<SignUp> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: const Text(
-                AppText.SIGNUP,
+                AppText.forgotPassword,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -61,7 +56,7 @@ class _SignUpState extends State<SignUp> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: const Text(
-                "Please sign up to get started",
+                "Please sign in to your existing account",
                 style: TextStyle(
                   fontSize: 16,
                   color: AppPallete.secondaryLightTextColor,
@@ -96,29 +91,10 @@ class _SignUpState extends State<SignUp> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   AuthField(
-                                    textController: nameController,
-                                    hintText: "Harshal Patil",
-                                    label: 'Name',
-                                  ),
-                                  const SizedBox(height: 24),
-                                  AuthField(
                                     textController: emailController,
                                     hintText: AppText.exampleEmail,
                                     label: 'Email',
-                                  ),
-                                  const SizedBox(height: 24),
-                                  AuthField(
-                                    textController: passwordController,
-                                    hintText: "* * * * * * * *",
-                                    label: 'Password',
-                                    obscureText: true,
-                                  ),
-                                  const SizedBox(height: 24),
-                                  AuthField(
-                                    textController: reTypePasswordController,
-                                    hintText: "* * * * * * * *",
-                                    label: 'Re-Type Password',
-                                    obscureText: true,
+                                    authoFocus: true,
                                   ),
                                 ],
                               ),
