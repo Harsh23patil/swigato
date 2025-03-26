@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
-import 'package:swigato/core/theme/textstyle.dart';
 
 class AppButton extends StatelessWidget {
   final String buttonText;
+  final VoidCallback onPressed;
   const AppButton({
     super.key,
     required this.buttonText,
+    required this.onPressed,
   });
 
   @override
@@ -27,7 +27,7 @@ class AppButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12), // Set your desired radius
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           buttonText,
           style: const TextStyle(

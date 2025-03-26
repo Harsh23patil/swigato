@@ -6,18 +6,23 @@ class AppTheme {
   static final _border = OutlineInputBorder(
     borderSide: const BorderSide(
       color: AppPallete.authFielBackgroundColor,
-      width: 0,
+      width: 1,
     ),
     borderRadius: BorderRadius.circular(10),
+  );
+  static const _errorBorder = UnderlineInputBorder(
+    borderSide: BorderSide(
+      color: AppPallete.buttonColor,
+      width: 2,
+    ),
   );
   static final darkThemeMode = ThemeData.dark();
   static final lightThemeMode = ThemeData.light().copyWith(
     scaffoldBackgroundColor: AppPallete.lightBackgroundColor,
     textTheme: GoogleFonts.senTextTheme(),
-    textSelectionTheme:const TextSelectionThemeData(
-      cursorColor: AppPallete.cursorColor,
-      selectionHandleColor: AppPallete.cursorColor
-    ),
+    textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: AppPallete.cursorColor,
+        selectionHandleColor: AppPallete.cursorColor),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
       fillColor: AppPallete.authFielBackgroundColor,
@@ -28,8 +33,9 @@ class AppTheme {
         color: AppPallete.darkHeadLine1,
       ),
       enabledBorder: _border,
-      errorBorder: _border,
       focusedBorder: _border,
+      errorBorder: _errorBorder,
+      focusedErrorBorder: _errorBorder,
       disabledBorder: _border,
     ),
   );

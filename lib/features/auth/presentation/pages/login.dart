@@ -7,6 +7,7 @@ import 'package:swigato/core/theme/textstyle.dart';
 import 'package:swigato/features/auth/presentation/pages/forgot_password.dart';
 import 'package:swigato/features/auth/presentation/pages/sign_up.dart';
 import 'package:swigato/features/auth/presentation/widgets/auth_field.dart';
+import 'package:swigato/features/auth/presentation/widgets/icon_image.dart';
 import 'package:swigato/features/auth/presentation/widgets/login_icon_options.dart';
 
 class LoginPage extends StatefulWidget {
@@ -44,15 +45,12 @@ class _LoginPageState extends State<LoginPage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // My custome appbar
-            CustomAppbar(
-                // firstWidget: WidgetFuctionCombine(
-                //     widget: const AppBackButton(), functionality: () {}),
-                ),
+            const CustomAppbar(),
 
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: const Text(
-                AppText.LOGIN,
+                AppText.login,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
@@ -166,7 +164,8 @@ class _LoginPageState extends State<LoginPage> {
                                       ),
                                       GestureDetector(
                                         onTap: () {
-                                          Navigator.push(context, ForgotPassword.route());
+                                          Navigator.push(
+                                              context, ForgotPassword.route());
                                         },
                                         child: const Text(
                                           "Forgot Password?",
@@ -180,10 +179,9 @@ class _LoginPageState extends State<LoginPage> {
                                     ],
                                   ),
                                   const SizedBox(height: 22),
-                                  Container(
-                                    child: const AppButton(
-                                      buttonText: "Log In",
-                                    ),
+                                  AppButton(
+                                    buttonText: "Log In",
+                                    onPressed: () {},
                                   ),
                                   const SizedBox(height: 34),
                                   Center(
@@ -209,7 +207,8 @@ class _LoginPageState extends State<LoginPage> {
                                                   fontFamily: FontFamily.sen,
                                                   fontSize: 14,
                                                   fontWeight: FontWeight.w400,
-                                                  color: AppPallete.buttonColor),
+                                                  color:
+                                                      AppPallete.buttonColor),
                                             )
                                           ],
                                         ),
@@ -220,11 +219,15 @@ class _LoginPageState extends State<LoginPage> {
                                   const Center(
                                     child: Text(
                                       "Or",
-                                      style: TextStyle(fontSize: 16, color: AppPallete.darkHeadLine2),
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          color: AppPallete.darkHeadLine2),
                                     ),
                                   ),
                                   const SizedBox(height: 24),
                                   const LoginIconOptions(),
+                                  // const SizedBox(height: 24),
+                                  // IconImage(),
                                 ],
                               ),
                             ),

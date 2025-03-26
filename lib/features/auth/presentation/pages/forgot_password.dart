@@ -8,7 +8,8 @@ import 'package:swigato/core/theme/app_pallete.dart';
 import 'package:swigato/features/auth/presentation/widgets/auth_field.dart';
 
 class ForgotPassword extends StatefulWidget {
-  static route() => MaterialPageRoute(builder: (context) => const ForgotPassword());
+  static route() =>
+      MaterialPageRoute(builder: (context) => const ForgotPassword());
   const ForgotPassword({super.key});
 
   @override
@@ -37,11 +38,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             // My custome appbar
             CustomAppbar(
               firstWidget: WidgetFuctionCombine(
-                  widget: const AppBackButton(), functionality: () {
+                  widget: const AppBackButton(),
+                  functionality: () {
                     Navigator.pop(context);
                   }),
             ),
-        
+
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: const Text(
@@ -84,10 +86,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           child: SingleChildScrollView(
                             child: ConstrainedBox(
                               constraints: BoxConstraints(
-                                minHeight:
-                                    constraints.maxHeight, // Ensures full height
+                                minHeight: constraints
+                                    .maxHeight, // Ensures full height
                               ),
-                              child:  Column(
+                              child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   AuthField(
@@ -101,12 +103,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                             ),
                           ),
                         ),
-        
+
                         /// Sticky Button at the Bottom
                         Container(
                           padding: const EdgeInsets.only(top: 10),
-                          child: const AppButton(
-                            buttonText: AppText.SIGNUP,
+                          child: AppButton(
+                            buttonText: AppText.singUp,
+                            onPressed: () {},
                           ),
                         ),
                       ],

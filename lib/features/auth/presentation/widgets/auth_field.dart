@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swigato/core/constants/texts.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
 
 class AuthField extends StatefulWidget {
@@ -6,12 +7,14 @@ class AuthField extends StatefulWidget {
   final String label;
   final bool obscureText;
   final TextEditingController textController;
+  final String passwordText;
   final bool authoFocus;
   const AuthField({
     super.key,
     required this.hintText,
     required this.label,
     required this.textController,
+    this.passwordText = "",
     this.obscureText = false,
     this.authoFocus = false,
   });
@@ -21,7 +24,6 @@ class AuthField extends StatefulWidget {
 }
 
 class _AuthFieldState extends State<AuthField> {
-
   bool showPassword = false;
 
   @override
@@ -29,6 +31,7 @@ class _AuthFieldState extends State<AuthField> {
     showPassword = widget.obscureText;
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,6 +49,9 @@ class _AuthFieldState extends State<AuthField> {
               hintStyle: const TextStyle(
                 color: AppPallete.authHintTextColor,
               ),
+              errorStyle: const TextStyle(
+                color: AppPallete.buttonColor,
+              ),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               suffixIcon: (widget.obscureText)
                   ? GestureDetector(
@@ -54,12 +60,26 @@ class _AuthFieldState extends State<AuthField> {
                           showPassword = !showPassword;
                         });
                       },
-                      child:(showPassword)? Icon(Icons.remove_red_eye_rounded, color: AppPallete.showPasswordEyeColor, size: 22,) : const Icon(Icons.visibility_off_outlined, color: AppPallete.showPasswordEyeColor, size: 22,),
+                      child: (showPassword)
+                          ? const Icon(
+                              Icons.remove_red_eye_rounded,
+                              color: AppPallete.gray200,
+                              size: 22,
+                            )
+                          : const Icon(
+                              Icons.visibility_off_outlined,
+                              color: AppPallete.gray200,
+                              size: 22,
+                            ),
                     )
                   : null),
           validator: (value) {
             if (value!.isEmpty) {
-              return "${widget.hintText} is missing";
+              return "${widget.label} is missing";
+            }
+            if (widget.label == AppText.reTypePassword &&
+                widget.passwordText != value) {
+              return "Re-type password does not match";
             }
             return null;
           },

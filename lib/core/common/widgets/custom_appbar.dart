@@ -17,13 +17,16 @@ class CustomAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(24, 60, 24, 24),
+      padding: const EdgeInsets.only(top: 60),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
-              if (firstWidget != null) GestureDetector(onTap: firstWidget!.functionality ,child: firstWidget!.widget),
+              if (firstWidget != null)
+                GestureDetector(
+                    onTap: firstWidget!.functionality,
+                    child: firstWidget!.widget),
               if (secWidget != null) secWidget!.widget,
             ],
           ),
