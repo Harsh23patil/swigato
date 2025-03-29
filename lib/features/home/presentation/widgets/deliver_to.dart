@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:swigato/core/constants/texts.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
 
@@ -30,7 +31,8 @@ class DeliverTo extends StatelessWidget {
                   color: AppPallete.gray500,
                 ),
               ),
-              Icon(Icons.keyboard_arrow_down)
+              Icon(Icons.keyboard_arrow_down_sharp)
+              // SvgPicture.asset("");
             ],
           )
         ],

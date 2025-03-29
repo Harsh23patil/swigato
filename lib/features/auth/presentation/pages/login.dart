@@ -9,6 +9,7 @@ import 'package:swigato/features/auth/presentation/pages/sign_up.dart';
 import 'package:swigato/features/auth/presentation/widgets/auth_field.dart';
 import 'package:swigato/features/auth/presentation/widgets/icon_image.dart';
 import 'package:swigato/features/auth/presentation/widgets/login_icon_options.dart';
+import 'package:swigato/features/home/presentation/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   static route() => MaterialPageRoute(builder: (context) => const LoginPage());
@@ -165,7 +166,9 @@ class _LoginPageState extends State<LoginPage> {
                                       GestureDetector(
                                         onTap: () {
                                           Navigator.push(
-                                              context, ForgotPassword.route());
+                                            context,
+                                            HomePage.route(),
+                                          );
                                         },
                                         child: const Text(
                                           "Forgot Password?",

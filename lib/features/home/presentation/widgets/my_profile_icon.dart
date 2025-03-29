@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
 
 class MyProfileIcon extends StatelessWidget {
@@ -17,6 +18,13 @@ class MyProfileIcon extends StatelessWidget {
         size: 20,
         color: AppPallete.darkBackgroundColor,
       ),
+      // child: Container(
+      //   height: 16,
+      //   width: 12,
+      //   child: SvgPicture.asset(
+      //     "resources/assets/images/menu.svg",
+      //   ),
+      // ),
     );
   }
 }

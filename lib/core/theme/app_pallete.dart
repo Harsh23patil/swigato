@@ -22,12 +22,16 @@ class AppPallete {
 
   static const Color white = Color.fromARGB(255, 255, 255, 255);
   static const Color gray50 = Color.fromARGB(255, 236, 240, 244);
-  static const Color gray100 = Color.fromARGB(255, 226, 222, 222);
+  static const Color gray100 = Color.fromARGB(255, 224, 222, 222);
+  static const Color gray150 = Color.fromARGB(255, 205, 205, 205);
   static const Color gray200 = Color.fromARGB(255, 180, 185, 202);
+  static const Color gray300 = Color.fromARGB(255, 100, 105, 130);
   static const Color gray500 = Color.fromARGB(255, 103, 103, 103);
+  static const Color gray600 = Color.fromARGB(255, 51, 51, 51);
   static const Color gray700 = Color.fromARGB(255, 30, 29, 29);
 
   static const Color blue200 = Color.fromARGB(255, 160, 165, 186);
+  static const Color blue250 = Color.fromARGB(255, 152, 168, 184);
   static const Color blue800 = Color.fromARGB(255, 24, 28, 46);
 
   static const Color red50 = Color.fromARGB(255, 246, 246, 246);

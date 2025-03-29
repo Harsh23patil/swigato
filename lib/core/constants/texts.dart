@@ -15,4 +15,7 @@ class AppText {
   static const String goodMorning = 'Good Morning!';
   static const String goodAfternoon = 'Good Afternoon!';
   static const String goodEvening = 'Good Evening!';
+  static const String seeAll = 'See All';
+  static const String OpenRestaurant = 'Open Restaurant';
+  static const String allCategory = 'All Category';
 }

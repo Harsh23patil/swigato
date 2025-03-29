@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Blog App',
       theme: AppTheme.lightThemeMode,
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
