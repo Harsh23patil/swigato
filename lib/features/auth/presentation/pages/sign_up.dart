@@ -124,7 +124,7 @@ class _SignUpState extends State<SignUp> {
                                   AuthField(
                                     textController: reTypePasswordController,
                                     hintText: AppText.passwordObsured,
-                                    passwordText: passwordController.text,
+                                    passwordController: passwordController,
                                     label: AppText.reTypePassword,
                                     obscureText: true,
                                   ),

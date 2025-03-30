@@ -7,14 +7,14 @@ class AuthField extends StatefulWidget {
   final String label;
   final bool obscureText;
   final TextEditingController textController;
-  final String passwordText;
+  final TextEditingController? passwordController;
   final bool authoFocus;
   const AuthField({
     super.key,
     required this.hintText,
     required this.label,
     required this.textController,
-    this.passwordText = "",
+    this.passwordController,
     this.obscureText = false,
     this.authoFocus = false,
   });
@@ -78,7 +78,8 @@ class _AuthFieldState extends State<AuthField> {
               return "${widget.label} is missing";
             }
             if (widget.label == AppText.reTypePassword &&
-                widget.passwordText != value) {
+                widget.passwordController != null &&
+                widget.passwordController?.text != value) {
               return "Re-type password does not match";
             }
             return null;

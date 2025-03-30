@@ -218,9 +218,9 @@ class _HomePageState extends State<HomePage> {
                                   child: Text(
                                     "X",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w800,
+                                      fontWeight: FontWeight.w900,
                                       color: AppPallete.white,
-                                      fontSize: 12,
+                                      fontSize: 13,
                                     ),
                                   ),
                                 ),
@@ -312,7 +312,7 @@ class _HomePageState extends State<HomePage> {
                 height: 20,
               ),
 
-              if (openRestaurantList.length >= 1)
+              if (openRestaurantList.isNotEmpty)
                 SingleChildScrollView(
                   child: Column(
                     children: openRestaurantList.map((restaurant) {
