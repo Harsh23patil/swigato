@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:swigato/core/constants/texts.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
 import 'package:swigato/core/theme/textstyle.dart';
-import 'package:swigato/features/home/data/restaurant_info.dart';
+import 'package:swigato/features/home/data/models/restaurant_info.dart';
 import 'package:swigato/features/home/presentation/widgets/deliver_to.dart';
 import 'package:swigato/features/home/presentation/widgets/heading_row.dart';
 import 'package:swigato/features/home/presentation/widgets/my_cart.dart';

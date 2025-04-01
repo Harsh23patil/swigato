@@ -4,28 +4,24 @@ import 'package:swigato/core/error/failures.dart';
 import 'package:swigato/core/usecase/usecase.dart';
 import 'package:swigato/features/auth/domain/repository/auth_repository.dart';
 
-class UserSignUp implements UseCase<User, UserSignUpParam> {
+class UserLogin implements UseCase<User, UserLogInParam> {
   final AuthRepository authRepository;
 
-  UserSignUp(this.authRepository);
+  const UserLogin(this.authRepository);
   @override
-  Future<Either<Failure, User>> call(UserSignUpParam params) async {
-    // TODO: implement call
-    return await authRepository.signUpWithEmailPassword(
-      name: params.name,
+  Future<Either<Failure, User>> call(UserLogInParam params) async {
+    return await authRepository.loginWithEmailPassword(
       email: params.email,
       password: params.password,
     );
   }
 }
 
-class UserSignUpParam {
-  final String name;
+class UserLogInParam {
   final String email;
   final String password;
 
-  UserSignUpParam({
-    required this.name,
+  UserLogInParam({
     required this.email,
     required this.password,
   });

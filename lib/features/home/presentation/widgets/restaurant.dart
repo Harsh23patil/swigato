@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:swigato/core/theme/app_pallete.dart';
-import 'package:swigato/features/home/data/restaurant_info.dart';
+import 'package:swigato/features/home/data/models/restaurant_info.dart';
 
 class Restaurant extends StatelessWidget {
   final RestaurantInfo restaurantInfo;
